@@ -25,6 +25,12 @@
     div.button-container {
         color: white;
         background: black;
+        display: flex;
+        flex-direction: row;
+
+    }
+    div.empty-div {
+        flex-grow: 1;
     }
     div.js-video-container {
         flex-grow: 1;
@@ -48,6 +54,10 @@
         </button>
         <button class="js-mute-button">
             <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+        <div class="empty-div"></div>
+        <button class="js-fullscreen-button">
+            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
     </div>
 </div>
