@@ -15,6 +15,9 @@
       width: 36px;
       font-size: 20px;
     }
+    .vp-timer {
+        align-self: flex-start;
+    }
     .vp-player {
         width: 800px;
         height: 600px;
@@ -44,6 +47,7 @@
 <div id="player" class="vp-player">
     <div class="js-video-container vp-screen">
     </div>
+
     <div class="vp-button-container">
         <button class="js-play-button vp-player-button play">
             <i class="fa fa-play" aria-hidden="true"></i>
@@ -57,10 +61,16 @@
         <button class="js-mute-button vp-player-button volume-up">
             <i class="fa fa-volume-up" aria-hidden="true"></i>
         </button>
+        <div class="vp-timer" style="color: white;">
+            <span class="js-current-time"></span>
+            —
+            <span class="js-duration"></span>
+        </div>
         <div class="vp-player-button empty-div"></div>
         <button class="js-fullscreen-button vp-player-button fullscreen">
             <i class="fa fa-arrows-alt" aria-hidden="true"></i>
         </button>
+
     </div>
 </div>
 
