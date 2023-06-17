@@ -5,8 +5,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./static/font-awesome.min.css">
     <link rel="icon" type="image/png" href="./static/favicon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
-    .vp-player-button {
+    .vp-button-container .vp-player-button {
       border-style: none;
       color: ghostwhite;
       cursor: pointer;
@@ -15,9 +18,18 @@
       width: 36px;
       font-size: 20px;
     }
-    .vp-timer {
+    .vp-button-container .vp-viewing-panel .vp-current-time {
         align-self: flex-start;
+        font-family: 'Roboto', sans-serif;
     }
+    .vp-button-container .vp-viewing-panel .vp-duration-time {
+        align-self: flex-start;
+        font-family: 'Roboto', sans-serif;
+    }
+    .vp-button-container .vp-viewing-panel .vp-player-progress {
+        flex-grow: 1;
+    }
+
     .vp-player {
         width: 800px;
         height: 600px;
@@ -33,7 +45,10 @@
         align-items: center;
 
     }
-    .vp-player-button.empty-div {
+    .vp-button-container .vp-viewing-panel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         flex-grow: 1;
     }
     .vp-player .vp-screen {
@@ -49,28 +64,37 @@
     </div>
 
     <div class="vp-button-container">
-        <button class="js-play-button vp-player-button play">
-            <i class="fa fa-play" aria-hidden="true"></i>
-        </button>
-        <button class="js-pause-button vp-player-button pause">
-            <i class="fa fa-pause" aria-hidden="true"></i>
-        </button>
-        <button class="js-volume-button vp-player-button volume-off">
-            <i class="fa fa-volume-off" aria-hidden="true"></i>
-        </button>
-        <button class="js-mute-button vp-player-button volume-up">
-            <i class="fa fa-volume-up" aria-hidden="true"></i>
-        </button>
-        <div class="vp-timer" style="color: white;">
-            <span class="js-current-time"></span>
-            —
-            <span class="js-duration"></span>
+        <div class="vp-left-buttons">
+            <button class="js-play-button vp-player-button play">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </button>
+            <button class="js-pause-button vp-player-button pause">
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </button>
+            <button class="js-volume-button vp-player-button volume-off">
+                <i class="fa fa-volume-off" aria-hidden="true"></i>
+            </button>
+            <button class="js-mute-button vp-player-button volume-up">
+                <i class="fa fa-volume-up" aria-hidden="true"></i>
+            </button>
         </div>
-        <div class="vp-player-button empty-div"></div>
-        <button class="js-fullscreen-button vp-player-button fullscreen">
-            <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-        </button>
-
+        <div class="vp-viewing-panel">
+            <div class="vp-current-time" style="color: white;">
+                <span class="js-current-time"></span>
+            </div>
+            <div class="js-progress vp-player-progress" style="background-color: grey;">
+                <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+            </div>
+            <div class="vp-duration-time" style="color: white;">
+                <span class="js-duration"></span>
+            </div>
+<!--            <div class="vp-player-button empty-div"></div>-->
+        </div>
+        <div class="vp-right-buttons">
+            <button class="js-fullscreen-button vp-player-button fullscreen">
+                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+            </button>
+        </div>
     </div>
 </div>
 
