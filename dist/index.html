@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <title>Пример подключения плеера</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="./static/font-awesome.min.css">
     <link rel="icon" type="image/png" href="./static/favicon-32x32.png" sizes="32x32">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,6 @@
         margin-right: 6px;
     }
     .vp-button-container .vp-viewing-panel .vp-player-progress-slider {
-        flex-grow: auto ;
         align-items: center;
         background-color: red;
         height: 6px;
@@ -85,8 +84,8 @@
       display: inline-block;
       border-style: solid;
       border-width: 3px;
-      border-color: white
-      box-shadow: 0 0 10px rgba(0,250,0,2);
+      border-color: white;
+      box-shadow: 0 0 5px rgba(0,250,0,2);
       margin: -2px;
       opacity: 0;
       transition-property: all;
@@ -146,7 +145,7 @@
 <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
 <script src="player.js"></script>
 
-<script type="text/javascript">
+<script>
     createPlayer({elementId: 'player'});
 
 
