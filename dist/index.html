@@ -14,20 +14,37 @@
       color: ghostwhite;
       cursor: pointer;
       background-color: transparent;
-      height: 35px;
-      width: 36px;
+      height: 36px;
+      width: 34px;
       font-size: 20px;
     }
     .vp-button-container .vp-viewing-panel .vp-current-time {
         align-self: flex-start;
         font-family: 'Roboto', sans-serif;
+        margin-left: 2px;
     }
     .vp-button-container .vp-viewing-panel .vp-duration-time {
         align-self: flex-start;
         font-family: 'Roboto', sans-serif;
+        margin-left: 2px;
     }
     .vp-button-container .vp-viewing-panel .vp-player-progress {
         flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: black;
+        height: 6px;
+        border-radius: 3px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .vp-button-container .vp-viewing-panel .vp-player-progress-slider {
+        flex-grow: auto ;
+        align-items: center;
+        background-color: red;
+        height: 6px;
+        border-radius: 10px;
     }
 
     .vp-player {
@@ -43,6 +60,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        height: 44px;
 
     }
     .vp-button-container .vp-viewing-panel {
@@ -53,6 +71,22 @@
     }
     .vp-player .vp-screen {
         flex-grow: 1;
+    }
+    .vp-button-container .vp-right-buttons {
+        margin-right: 2px;
+
+    }
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white
+      box-shadow: 0 0 10px rgba(0,250,0,2);
+      margin: -2px;
     }
 
 
@@ -82,8 +116,10 @@
             <div class="vp-current-time" style="color: white;">
                 <span class="js-current-time"></span>
             </div>
-            <div class="js-progress vp-player-progress" style="background-color: grey;">
-                <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+            <div class="js-progress vp-player-progress">
+
+                <div class="js-progress-slider vp-player-progress-slider" > </div>
+                <span class="dot"></span>
             </div>
             <div class="vp-duration-time" style="color: white;">
                 <span class="js-duration"></span>
@@ -95,6 +131,7 @@
                 <i class="fa fa-arrows-alt" aria-hidden="true"></i>
             </button>
         </div>
+
     </div>
 </div>
 
