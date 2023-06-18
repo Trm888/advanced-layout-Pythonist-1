@@ -87,8 +87,14 @@
       border-color: white
       box-shadow: 0 0 10px rgba(0,250,0,2);
       margin: -2px;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: 300ms;
+      transition-timing-function: linear;
     }
-
+    .vp-button-container:hover .dot {
+      opacity: 1
+    }
 
     </style>
 </head>
